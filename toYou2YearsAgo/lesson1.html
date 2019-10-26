@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href= "../style.css">
+    <link rel="shortcut icon" href="../faviconmt.ico" type="image/x-icon"/>
+    <title>
+      Music Theory 105
+    </title>  
+    <style>
+      .button{ 
+        background-color: #515656; /* to add a parameter to an HTML function thing, use single quotes 'x' */
+        border-style:solid;
+        border-width:2px;
+        border-color:black;
+        color: white;
+        padding: 15px 10px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px 2px;
+        cursor: pointer;}
+      .guessPic{
+        border:3px solid #000000;
+        height:40px;
+        margin:2px 0px;
+        visibility: hidden;
+      }
+    </style>
+
+  </head>
+  <!-- why did we make all the images on this page move from the left and not align/float left? maybe we should change that-->
+  <body>
+     <canvas id="staffcanvas" width="527" height="188" style="position:absolute;left:729px;top:267px;"></canvas>
+    <h1 class= "title"> Lesson 1: Notes and Rests </h1>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li class="currentlink"><a class="currentlink">Lesson 1</a></li>
+      <li><a href="lesson2.html">Lesson 2</a></li>
+      <li><a href="lesson3.html">Lesson 3</a></li>
+      
+    </ul>
+    
+    <p class= "info">   A note is a symbol used in music to repersent pitch and duration. There are 2 parts in identifying a note, it's pitch and it's type.  We are first going to learn how to identify the pitches of each note.   
+    The chart below is a list of <em>natural</em> pitches. There are other types of pitches, but we will get to them later.<br> <br>  
+    <img id="pic1.1" style="border:3px solid #000000;margin-left:30%" src="../MTpic1.1.PNG"/> <br> <br>
+    As you can see you can identify a note from the letters A-G. You can also notice that some of the notes are drawn <em>on</em> the lines and some are drawn <em>in between</em> the lines. Check out the names of the notes written on the lines(the blue ones) and the names of the notes written on the spaces (the green ones). <br> <br>
+    <img style="border:3px solid #000000;margin-left:30%;width:527px;height:188px" src="../MTpic1.2.PNG"/> <br> <br>
+    Notice that every other letter from a line note is a line note and every other letter from a space note is a space note. This is a handy trick to remember when you don't know the note names of the notes.<br> <br>
+    Now let's move on to the next part. A note can also tell us how long it is supposed to be played. This is how a note can tell us how long we should play them. A beat is a rhythmic unit of time in music. Just think of beats as <em>seconds</em> in music.<br> <br>
+    <img style="border:3px solid #000000;margin-left:30%;width:527px" src="../note_values.PNG"/><br> <br>
+    Because we have different lengths of note playing when you are reading music, it is important to count your notes. What we mean by this is that you have to keep track of time so you won't get lost when reading your music. From the example above, a rest is a symbol that tells us that a note does not play on that beat, basically, take a break from the music and wait until you encounter the next note.<br> <br>
+    Let's try counting this piece of music.<br> <br>
+    <img style="border:3px solid #000000;margin-left:22%;width:700px;height:100px" src="../MTpic1.3.PNG"/><br> <br>
+    Let's identify the note names. The first note is a whole note followed by a half note. Don't worry about the vertical line in between the two notes as this will be discussed in later lessons. The half note is followed by two quarter notes, which is followed by a quarter rest, which is followed by a quarter note, which is followed by a half note, which is followed by a half rest, which ends with a half note. Now it's time to use our math skills: Find the total number of beats in this excerpt.<br> <br> <br>
+    4 + 2 + 1 + 1 + (silent 1) + 1 + 2 + (silent 2) + 2 = 16 TOTAL beats (13 TOTAL beats played)<br> <br> <br>
+    Remember, you count beats for both notes and rests. Once you have played the note or rest to its full length, you immediately play the note or rest that follows it. Unlike notes, rests do not have letter names.<br><br><b><u>Quiz:</b></u><br><br>
+    Lets read some music!<br><br>
+    <img style="border:3px solid #000000" src="../MTpic1.4.PNG"/><br><br>
+    Question 1: How many <b>total</b> beats are there in this exerpt?<br>
+    <button class="button" id="1_Q1A" onclick="AnsCheck('1','1','Q1A')" type="button">14 beats</button> 
+    <button class="button" id="1_Q1B" onclick="AnsCheck('1','1','Q1B')" type="button">16 beats</button>
+    <button class="button" id="1_Q1C" onclick="AnsCheck('1','1','Q1C')" type="button">20 beats</button> 
+    <img id="1_1R" class="guessPic" src="../MTpic1.8.PNG"/> 
+    <img id="1_1W" class="guessPic" src="../MTpic1.9.PNG"/>
+    <br><br>
+    Question 2: How many <b>total</b> beats within this exerpt are rested?<br>
+    <button class="button" id="1_Q2A" onclick="AnsCheck('1','2','Q2A')" type="button">0 beats of rest</button> 
+    <button class="button" id="1_Q2B" onclick="AnsCheck('1','2','Q2B')" type="button">3 beats of rest</button>
+    <button class="button" id="1_Q2C" onclick="AnsCheck('1','2','Q2C')" type="button">6 beats of rest</button>
+    <img id="1_2R" class="guessPic" src="../MTpic1.8.PNG"/> 
+    <img id="1_2W" class="guessPic" src="../MTpic1.9.PNG"/>
+    <br><br>
+    Question 3: How many <b>total</b> beats are played?<br>
+    <button class="button" id="1_Q3A" onclick="AnsCheck('1','3','Q3A')" type="button">10 beats of playing</button> 
+    <button class="button" id="1_Q3B" onclick="AnsCheck('1','3','Q3B')" type="button">16 beats of playing</button>
+    <button class="button" id="1_Q3C" onclick="AnsCheck('1','3','Q3C')" type="button">13 beats of playing</button>
+    <img id="1_3R" class="guessPic" src="../MTpic1.8.PNG"/> 
+    <img id="1_3W" class="guessPic" src="../MTpic1.9.PNG"/>
+    <br><br><br>
+    <img style="border: 3px solid #000000" src="../MTpic1.5.PNG"/><br><br>
+    Question 1: How many <b>total</b> beats are there in this exerpt?<br>
+    <button class="button" id="2_Q1A" onclick="AnsCheck('2','1','Q1A')" type="button">9 beats</button> 
+    <button class="button" id="2_Q1B" onclick="AnsCheck('2','1','Q1B')" type="button">12 beats</button>
+    <button class="button" id="2_Q1C" onclick="AnsCheck('2','1','Q1C')" type="button">16 beats</button>
+    <img id="2_1R" class="guessPic" src="../MTpic1.8.PNG"/> 
+    <img id="2_1W" class="guessPic" src="../MTpic1.9.PNG"/>
+    <br><br>
+    Question 2: How many rests are there?<br>
+    <button class="button" id="2_Q2A" onclick="AnsCheck('2','2','Q2A')" type="button">11 rests</button> 
+    <button class="button" id="2_Q2B" onclick="AnsCheck('2','2','Q2B')" type="button">6 rests</button>
+    <button class="button" id="2_Q2C" onclick="AnsCheck('2','2','Q2C')" type="button">2 rests</button>
+    <img id="2_2R" class="guessPic" src="../MTpic1.8.PNG"/> 
+    <img id="2_2W" class="guessPic" src="../MTpic1.9.PNG"/>
+    <br><br>
+    Question 3: How many quarter notes are there?<br>
+    <button class="button" id="2_Q3A" onclick="AnsCheck('2','3','Q3A')" type="button">2</button> 
+    <button class="button" id="2_Q3B" onclick="AnsCheck('2','3','Q3B')" type="button">6</button>
+    <button class="button" id="2_Q3C" onclick="AnsCheck('2','3','Q3C')" type="button">7</button>
+    <img id="2_3R" class="guessPic" src="../MTpic1.8.PNG"/> 
+    <img id="2_3W" class="guessPic" src="../MTpic1.9.PNG"/>
+    <br><br><br>
+    <img style="border: 3px solid #000000" src="../MTpic1.7.PNG"/><i>*When two eighth notes are next to each other they are joined together by a line*</i><br><br> 
+    Question 1: How many <b>quarter</b> notes are there?<br>
+    <button class="button" id="3_Q1A" onclick="AnsCheck('3','1','Q1A')" type="button">6</button> 
+    <button class="button" id="3_Q1B" onclick="AnsCheck('3','1','Q1B')" type="button">7</button>
+    <button class="button" id="3_Q1C" onclick="AnsCheck('3','1','Q1C')" type="button">10</button>
+    <img id="3_1R" class="guessPic" src="../MTpic1.8.PNG"/> 
+    <img id="3_1W" class="guessPic" src="../MTpic1.9.PNG"/>
+    <br><br>
+    Question 2: How many <b>eighth</b> notes are there?<br>
+    <button class="button" id="3_Q2A" onclick="AnsCheck('3','2','Q2A')" type="button">10</button> 
+    <button class="button" id="3_Q2B" onclick="AnsCheck('3','2','Q2B')" type="button">6</button>
+    <button class="button" id="3_Q2C" onclick="AnsCheck('3','2','Q2C')" type="button">11</button>
+    <img id="3_2R" class="guessPic" src="../MTpic1.8.PNG"/> 
+    <img id="3_2W" class="guessPic" src="../MTpic1.9.PNG"/>
+    <br><br>
+    Question 3:How many <b>total</b> notes are played in the exerpt?<br>
+    <button class="button" id="3_Q3A" onclick="AnsCheck('3','3','Q3A')" type="button">12</button> 
+    <button class="button" id="3_Q3B" onclick="AnsCheck('3','3','Q3B')" type="button">17</button>
+    <button class="button" id="3_Q3C" onclick="AnsCheck('3','3','Q3C')" type="button">18</button>
+    <img id="3_3R" class="guessPic" src="../MTpic1.8.PNG"/> 
+    <img id="3_3W" class="guessPic" src="../MTpic1.9.PNG"/>
+    <br><br>
+    </p>
+    <script>
+      var elementID="?";
+      var answerID="?";
+      var correctPic="?";
+      var wrongPic="?";
+      function getAnswer(picNumber,question){
+        if(picNumber == 1){
+          if(question ==  1){
+            correctPic= document.getElementById("1_1R");
+            wrongPic= document.getElementById("1_1W");
+            answerID="Q1B"; 
+            //alert(answerID+" is the correct answer");
+          }
+          if(question == 2){
+            correctPic= document.getElementById("1_2R");
+            wrongPic= document.getElementById("1_2W");
+            answerID="Q2B";
+            //alert(answerID+ " is the correct answer");
+          }
+          if(question == 3){
+            correctPic= document.getElementById("1_3R");
+            wrongPic= document.getElementById("1_3W");
+            answerID="Q3C";
+            //alert(answerID+" is the correct answer");
+          }
+        }
+        if(picNumber == 2){
+          if(question ==  1){
+            correctPic= document.getElementById("2_1R");
+            wrongPic= document.getElementById("2_1W");
+            answerID="Q1C"; 
+            //alert(answerID+" is the correct answer");
+          }
+          if(question == 2){
+            correctPic= document.getElementById("2_2R");
+            wrongPic= document.getElementById("2_2W");
+            answerID="Q2B";
+            //alert(answerID+ " is the correct answer");
+          }
+          if(question == 3){
+            correctPic= document.getElementById("2_3R");
+            wrongPic= document.getElementById("2_3W");
+            answerID="Q3C";
+            //alert(answerID+" is the correct answer");
+          }  
+        }
+        if(picNumber == 3){
+          if(question ==  1){
+            correctPic= document.getElementById("3_1R");
+            wrongPic= document.getElementById("3_1W");
+            answerID="Q1A"; 
+            //alert(answerID+" is the correct answer");
+          }
+          if(question == 2){
+            correctPic= document.getElementById("3_2R");
+            wrongPic= document.getElementById("3_2W");
+            answerID="Q2C";
+            //alert(answerID+ " is the correct answer");
+          }
+          if(question == 3){
+            correctPic= document.getElementById("3_3R");
+            wrongPic= document.getElementById("3_3W");
+            answerID="Q3B";
+            //alert(answerID+" is the correct answer");
+          }  
+        }
+      }
+      function AnsCheck(picNumber,question,clickedElement) {
+        getAnswer(picNumber,question);
+        elementID = clickedElement;
+        if(elementID==answerID){
+          correctPic.style.visibility= "visible";
+          wrongPic.style.visibility= "hidden"; 
+        }else{
+          wrongPic.style.visibility= "visible";  
+          correctPic.style.visibility= "hidden";
+        }
+      }
+        
+
+    
+    /*
+      alert("works1"); 
+      var c=document.getElementById("staffcanvas");
+      alert("works2");
+      var ctx=c.getContext("2d");
+      alert("works3");
+      var circleX = [105,165,220,275,330,385,445,505];
+      alert("works4");
+      var circleY = [120,110,105,95,85,80,70,60];
+      alert("works5");
+      alert("works6");
+      var mouseX;
+      alert("works7");
+      var mouseY;
+      alert("works8");
+      alert("works9");
+      */
+      /*
+      function DetectMouse(event) {
+        alert("works");
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+        alert("works");
+        for (var i=1, i<cicleX.length, i++){
+          alert("works");
+          if (mouseX >= circleX[i] && mouseX <= circleX[i]+15){
+            alert("works");
+          }
+        }
+      }
+      */
+    </script>
+
+    <!--<div class="rightSide" style= "margin-top:8.5%">
+      <img src="../note_values.PNG">
+    </div>-->
+   
+   
+  </body>
+  
